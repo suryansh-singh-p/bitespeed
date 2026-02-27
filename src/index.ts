@@ -6,8 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(identifyRouter);
 
-app.listen(3000, () => {
+const port = Number(process.env.PORT ?? 3000);
+
+app.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log("Server listening on http://localhost:3000");
+  console.log(`Server listening on http://localhost:${port}`);
 });
 
