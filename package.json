@@ -1,0 +1,28 @@
+{
+  "name": "codebyte",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "migrate": "tsx src/db/migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Bitespeed identity reconciliation backend (TypeScript + Express + Postgres)",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pg": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.2",
+    "@types/pg": "^8.16.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
